@@ -1,0 +1,726 @@
+/* =================================== */
+/*    Hero Area Section
+/* =================================== */
+.hero-area {
+  min-height: 1000px;
+  position: relative;
+  .hero-caption {
+    width: 100%;
+    .subheading {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      color: $colorblue;
+      letter-spacing: 4px;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+    div {
+      color: $colorred;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 45px;
+      padding-right: 155px;
+    }
+  }
+  .hero-img {
+    float: right;
+    img {
+      position: relative;
+      right: -63px;
+    }
+  }
+  .hero-shape {
+    position: absolute;
+    top: 13%;
+    left: 51%;
+  }
+}
+
+.custom-animation {
+  backface-visibility: hidden;
+  animation: jumping 9s ease-in-out 2s infinite alternate;
+  animation-delay: 1s;
+  transition: all 7s ease 2s;
+  user-select: none;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(10px) translateX(0) rotate(0) scale(1);
+    opacity: 0.9;
+  }
+  20% {
+    transform: translateY(20px) translateX(10px) rotate(-20deg) scale(0.8);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.75);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(-15px) translateX(-25px) rotate(10deg) scale(0.5);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-30px) translateX(20px) rotate(-20deg) scale(0.75);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(15px) translateX(15px) rotate(0) scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+/* =================================== */
+/*    Service Area Section 
+/* =================================== */
+.service-area {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0px;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/service/bg-half.png) no-repeat;
+    background-position: top right;
+  }
+  .service-block {
+    padding: 50px 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 0px rgba(85, 128, 255, 0.2);
+    i {
+      font-size: 35px;
+      background: rgba(144, 172, 209, 0.2);
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      padding-top: 16px;
+      border-radius: 10px;
+      display: inline-block;
+      color: #222222;
+    }
+    h4 {
+      margin-top: 25px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+h2.service-title {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+/* =================================== */
+/*    About Area Section
+/* =================================== */
+.about-area {
+  .section-title {
+    text-align: left;
+    h2 {
+      &::after,
+      &::before {
+        left: 0;
+        @include transform(translateX(0));
+      }
+    }
+  }
+  .img-about {
+    img {
+      outline: 10px solid $colorblue;
+      outline-offset: -54px;
+      border: 44px solid transparent;
+      border-width: 0px 10px 0px 85px;
+    }
+  }
+  .about-details {
+    .about-info {
+      li {
+        display: flex;
+        margin-bottom: 10px;
+        span {
+          width: calc(100% - 130px);
+          &:first-child {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222222;
+            width: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =================================== */
+/*    Resume Area Section 
+/* =================================== */
+#navi {
+  top: 180px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0;
+  li {
+    font-weight: 700;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: #000000;
+      &.current {
+        color: $colorblue;
+        margin-left: 20px;
+        position: relative;
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: -24px;
+          width: 20px;
+          height: 2px;
+          content: "";
+          @include transform(translateY(-50%));
+          background: $colorblue;
+        }
+      }
+    }
+  }
+}
+
+.page {
+    width: 100%;
+    margin-bottom: 3em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .heading {
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .resume-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #f9f9ff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      background: $colorblue;
+      border-radius: 50%;
+      span {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+    .text {
+      width: calc(100% - 100px);
+      padding: 0 0 10px;
+    }
+    .date {
+      font-weight: 700;
+      font-size: 16px;
+      color: #222222;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .position {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    &:hover {
+      background: $colorblue;
+      color: #ffffff;
+      .icon {
+        background: #fff;
+        span {
+          color: #222222;
+          font-weight: bold;
+        }
+      }
+      h4,
+      .date {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.progress-wrap {
+  width: 100%;
+  margin-bottom: 30px;
+  h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+}
+
+.progress {
+  height: 6px;
+  background: #e6e6e6;
+  overflow: visible;
+}
+
+.progress-bar {
+  background: $colorblue;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+  overflow: visible;
+  border-radius: 2px;
+  &::after {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background: $colorblue;
+    border-radius: 50%;
+  }
+  span {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
+}
+
+/* =================================== */
+/*    Works Area Section 
+/* =================================== */
+.filters {
+  li {
+    display: inline-block;
+    padding: 15px;
+    color: #222222;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: "";
+      background: $colorred;
+      opacity: 0.5;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      @include transform(translate3d(-100%, -100%, 0) scale(0));
+      position: absolute;
+      top: 44%;
+      left: 11px;
+      z-index: 1;
+    }
+    &.active,
+    &:hover {
+      &::before {
+        @include transform(translate3d(-30%, -70%, 0) scale(1));
+      }
+    }
+  }
+}
+
+.filters-content {
+  .grid {
+    .single-work {
+      &:first-of-type,
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+      .overlay {
+        position: absolute;
+        left: 0;
+        opacity: 0.9;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &:hover {
+        .overlay {
+          top: 20px;
+          background: $colorred;
+          left: 20px;
+        }
+      }
+      .short-info {
+        position: absolute;
+        bottom: 44px;
+        font-size: 14px;
+        left: 80px;
+        color: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+        h4 {
+          color: #fff;
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+      }
+      &:hover {
+        .short-info {
+          bottom: 24px;
+          left: 60px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+/* =================================== */
+/*    Price Area Section
+/* =================================== */
+.pricing-item {
+  padding: 40px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  .title {
+    color: $colorred;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+  }
+  .amount {
+    display: block;
+    font-size: 50px;
+    color: #333;
+    line-height: 1;
+  }
+  .month {
+    display: block;
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 5px 0 20px 0;
+  }
+  .icon {
+    margin-bottom: 30px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: #dadada;
+      position: absolute;
+      top: 50%;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+    i {
+      font-size: 25px;
+      color: #333;
+      line-height: 40px;
+      position: relative;
+    }
+  }
+  .pricing-content {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    li {
+      line-height: 15px;
+      margin-bottom: 25px;
+    }
+  }
+  &.middle {
+    background: $colorblue;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    a {
+      &.btn {
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+
+.pricing-item.middle .btn:hover {
+  color: #444;
+}
+
+.pricing-item.middle a:before {
+  background-color: #fff;
+}
+
+.pricing-item.middle .title,
+.pricing-item.middle .amount,
+.pricing-item.middle .month,
+.pricing-item.middle .icon i,
+.pricing-item.middle a.btn-area,
+.pricing-item.middle .pricing-content li {
+  color: #fff;
+}
+
+.pricing-shape {
+  .shape1,
+  .shape2 {
+    position: absolute;
+    z-index: 0;
+  }
+  .shape1 {
+    bottom: 0;
+    left: 0;
+  }
+  .shape2 {
+    top: 0;
+    right: 0;
+  }
+}
+
+/* =================================== */
+/*    Hire Me Area
+/* =================================== */
+
+.hire-me-area {
+  background: $colorred;
+  .section-title {
+    h2 {
+      color: #fff;
+      &::before,
+      &::after {
+        background: #fff;
+      }
+    }
+    p {
+      color: #fff;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  }
+  .btn {
+    border: 2px solid #fff;
+    background: transparent;
+    font-weight: bold;
+    &:hover {
+      color: #222222 !important;
+      &::before {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.hire-box {
+  text-align: center;
+  h4 {
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+  }
+}
+
+/* =================================== */
+/*    Testimonial Area Section
+/* =================================== */
+.test-slider {
+  border: solid 3px $colorblue;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 0 !important;
+  &::before {
+    content: "\f10d";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    color: $colorred;
+    padding: 0 35px;
+    font-size: 22px;
+    left: 15px;
+    line-height: 0.8;
+  }
+  .author-info {
+    display: inline-block;
+    position: relative;
+    padding: 15px 60px;
+    img {
+      position: absolute;
+      border-radius: 50%;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
+    h4 {
+      padding-top: 10px;
+      font-size: 21px;
+      font-weight: 700;
+    }
+    .position {
+      font-weight: 400;
+      text-transform: capitalize;
+      span {
+        color: $colorblue;
+      }
+    }
+  }
+}
+
+/* =================================== */
+/*    Blog Area Section
+/* =================================== */
+.blog-text {
+  padding: 0 40px;
+  .blog-text-inner {
+    background: #fff;
+    margin-top: -80px;
+    z-index: 3;
+    position: relative;
+    padding: 30px 30px 50px 30px;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+    .blog-date {
+      a {
+        font-size: 14px;
+        color: #6b6d6f;
+        margin-right: 30px;
+        position: relative;
+        &::before {
+          content: "";
+          background: #424242;
+          height: 14px;
+          width: 1px;
+          position: absolute;
+          left: -15px;
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+        i {
+          color: $colorred;
+          padding-right: 8px;
+        }
+      }
+    }
+    h4 {
+      padding: 15px 0px 22px 0px;
+    }
+  }
+}
+
+.blog-right {
+  padding-right: 30px;
+  .media-body {
+    small {
+      display: block;
+      color: $colorred;
+      padding: 4px 0px;
+      font-size: 14px;
+      i {
+        padding-right: 8px;
+        color: $colorblue;
+      }
+    }
+  }
+}
+
+/* =================================== */
+/*    Contact Area Section
+/* =================================== */
+.contact-area {
+  .media {
+    .media-body {
+      padding-left: 25px;
+    }
+    .media-icon {
+      font-size: 23px;
+      color: $colorblue;
+      width: 50px;
+      font-weight: bolder;
+      text-align: center;
+      height: 50px;
+      border-radius: 50%;
+      line-height: 50px;
+      border: 2px solid $colorred;
+    }
+    h4 {
+      margin-bottom: 8px;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+  .contact-form {
+    .btn {
+      background: $colorred;
+      margin-top: 15px;
+      &:hover {
+        &::before {
+          background: $colorblue;
+        }
+      }
+    }
+  }
+}
+
+/* =================================== */
+/*    Footer Area
+/* =================================== */
+.footer-area {
+  padding: 100px 0 !important;
+  .footer-logo {
+    h4 {
+      font-size: 21px;
+      color: #777777;
+      font-weight: 700;
+      margin-top: 48px;
+    }
+  }
+  .footer-social {
+    margin: 25px 0px 50px;
+    a {
+      padding: 0 20px;
+      i {
+        color: #cccccc;
+        font-size: 36px;
+        &:hover {
+          color: $colorred;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: $colorred;
+    }
+  }
+}

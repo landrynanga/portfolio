@@ -1,0 +1,120 @@
+/* =================================== */
+/*    Basic Style & Reset 
+/* =================================== */
+
+/* reset elements */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+::-moz-selection { background-color: $colorred; color: #fff }
+
+::selection { background-color: $colorred; color: #fff }
+
+::-webkit-input-placeholder {color: #777777;font-weight: 300 }
+
+:-moz-placeholder {
+    color: #777777;
+    opacity: 1;
+    font-weight: 300;
+}
+
+::-moz-placeholder {
+    color: #777777;
+    opacity: 1;
+    font-weight: 300; }
+
+:-ms-input-placeholder { color: #777777; font-weight: 300 }
+
+::-ms-input-placeholder { color: #777777; font-weight: 300 }
+
+body {
+    font-family: $fontbody;
+    color: #777777;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.625em;
+    position: relative;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+    font-family: $fontheader;
+    color: #222222;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1, .h1 { font-size: 36px }
+
+h2, .h2 { font-size: 30px }
+
+h3, .h3 { font-size: 24px }
+
+h4, .h4 { font-size: 18px }
+
+h5, .h5 { font-size: 16px }
+
+h6, .h6 { font-size: 14px }
+
+.img { max-width: 100% }
+
+.clear { clear: both }
+
+a,
+:after,
+:before,
+.transition { @include transition(.3s) }
+
+a:focus, a:hover { text-decoration: none }
+
+ul, ol { list-style: none }
+
+.section-padding {  padding: 90px 0 }
+
+.mb-50 { margin-bottom: 50px }
+
+.mt-50 { margin-top: 50px }
+
+.sky-blue { background: #f9f9ff }
+
+.section-title { text-align: center }
+
+.section-title h2 {
+    color: #222222;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 70px;
+    font-size: 45px;
+    line-height: 44px;
+}
+.section-title h2:before, 
+.section-title h2:after {
+     content: "";
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    background: $colorred;
+}
+.section-title h2:before {
+    bottom: -31px;
+    width: 100px;
+    height: 2px;
+}
+.section-title h2:after {
+    bottom: -35px;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+}
+.section-title p {
+    max-width: 540px;
+    margin: 0 auto;
+}
